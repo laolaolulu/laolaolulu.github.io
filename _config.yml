@@ -18,9 +18,9 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 李鹏 # the main title
+title: lipeng # the main title
 
-tagline: 李鹏的个人博客 # it will display as the sub-title
+tagline: 李 鹏 的个人博客 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
