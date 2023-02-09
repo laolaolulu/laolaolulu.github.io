@@ -13,6 +13,3 @@ jekyll s
 jekyll b --destination=docs
 ```
 
-李-鹏
-李 鹏
-李鹏

@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 
 title: lipeng # the main title
 
-tagline: 李 鹏 的个人博客 # it will display as the sub-title
+tagline: 个人博客-技术分享 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
