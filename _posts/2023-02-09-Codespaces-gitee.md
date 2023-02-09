@@ -22,8 +22,12 @@ ssh -T git@gitee.com #测试配置是否成功
 
 ### Codespances 中 git 操作
 
-```shell
-git add.
-```
-
-![image](/assets/img/posts/20230209/gitadd.png)
+1. git add.
+   ![gitadd](/assets/img/posts/20230209/gitadd.png)
+2. git commit
+   ![gitcommit](/assets/img/posts/20230209/gitcommit.png)
+3. git push
+   ![gitpush](/assets/img/posts/20230209/gitpush.png)
+4. 手持需要添加 gitee 地址 注意使用 ssh 连接 
+* 输入 gitee 仓库的 ssh 连接=>回车 -输入远程仓库名称(随意)=>回车 -完成推送
+   ![addremote](/assets/img/posts/20230209/addremote.png)
