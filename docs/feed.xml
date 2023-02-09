@@ -4,7 +4,7 @@
   <id>/</id>
   <title>lipeng</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2023-02-09T15:22:04+08:00</updated>
+  <updated>2023-02-09T15:50:26+08:00</updated>
   <author>
     <name>lipeng</name>
     <uri>/</uri>
@@ -17,6 +17,46 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Codespances使用git提交到gitee</title>
+    <link href="/posts/Codespaces-gitee/" rel="alternate" type="text/html" title="Codespances使用git提交到gitee" />
+    <published>2023-02-09T00:00:00+08:00</published>
+  
+    <updated>2023-02-09T00:00:00+08:00</updated>
+  
+    <id>/posts/Codespaces-gitee/</id>
+    <content src="/posts/Codespaces-gitee/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+测试 git 图片
+
+
+测试 git 图片
+
+
+_mp4
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
