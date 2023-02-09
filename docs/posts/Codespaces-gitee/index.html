@@ -38,8 +38,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Codespances使用git提交到gitee" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库" />
-<meta property="og:description" content="本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库" />
+<meta name="description" content="本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库" />
+<meta property="og:description" content="本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库" />
 <link rel="canonical" href="/posts/Codespaces-gitee/" />
 <meta property="og:url" content="/posts/Codespaces-gitee/" />
 <meta property="og:site_name" content="lipeng" />
@@ -48,7 +48,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Codespances使用git提交到gitee" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-09T17:11:00+08:00","datePublished":"2023-02-09T00:00:00+08:00","description":"本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库","headline":"Codespances使用git提交到gitee","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Codespaces-gitee/"},"url":"/posts/Codespaces-gitee/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-09T17:34:42+08:00","datePublished":"2023-02-09T00:00:00+08:00","description":"本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库","headline":"Codespances使用git提交到gitee","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Codespaces-gitee/"},"url":"/posts/Codespaces-gitee/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -921,7 +921,7 @@
 
 
 <em class=""
-    data-ts="1675933860"
+    data-ts="1675935282"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
   Feb  9, 2023
@@ -970,7 +970,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="285 words">
+  title="284 words">
   <em>1 min</em> read</span>
 
     </div>
@@ -980,7 +980,7 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <p>本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库</p>
+  <p>本文讲解在 Codespances(<a href="https://github.com/codespaces">https://github.com/codespaces</a>) 工具中如何提交代码到 gitee 仓库</p>
 
 <ul>
   <li>使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)</li>
@@ -997,13 +997,15 @@
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
+4
 </pre></td><td class="rouge-code"><pre><span class="nb">cd</span> ~/.ssh/ <span class="c">#转到.ssh目录</span>
-ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"xxxxx@xxxxx.com"</span> <span class="c">#创建ssh密钥 *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过</span>
+ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"xxxxx@xxxxx.com"</span> <span class="c">#创建ssh密钥</span>
+<span class="c"># *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过</span>
 <span class="nb">cat</span> ~/.ssh/id_ed25519.pub <span class="c">#查看公钥</span>
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
-    <p>向 gitee 添加 ssh 公钥,这个连接去配置(https://gitee.com/profile/sshkeys)</p>
+    <p>向 gitee 添加 ssh 公钥,点个连接去配置<a href="https://gitee.com/profile/sshkeys">https://gitee.com/profile/sshkeys</a></p>
 
     <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
@@ -1015,7 +1017,7 @@ ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span c
     <p>如果出现错误 :</p>
 
     <blockquote>
-      <p>git@gitee.com: Permission denied (publickey) {: .prompt-danger }</p>
+      <p class="prompt-danger">git@gitee.com: Permission denied (publickey)</p>
     </blockquote>
 
     <p>请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加</p>
@@ -1026,16 +1028,19 @@ ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span c
 
 <ol>
   <li>
-    <p>git add.
-<a href="/assets/img/posts/20230209/gitadd.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitadd.png" alt="gitadd" class="lazyload" data-proofer-ignore></a></p>
+    <p>git add.</p>
+
+    <p><a href="/assets/img/posts/20230209/gitadd.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitadd.png" alt="gitadd" class="lazyload" data-proofer-ignore></a></p>
   </li>
   <li>
-    <p>git commit
-<a href="/assets/img/posts/20230209/gitcommit.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitcommit.png" alt="gitcommit" class="lazyload" data-proofer-ignore></a></p>
+    <p>git commit</p>
+
+    <p><a href="/assets/img/posts/20230209/gitcommit.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitcommit.png" alt="gitcommit" class="lazyload" data-proofer-ignore></a></p>
   </li>
   <li>
-    <p>git push
-<a href="/assets/img/posts/20230209/gitpush.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitpush.png" alt="gitpush" class="lazyload" data-proofer-ignore></a></p>
+    <p>git push</p>
+
+    <p><a href="/assets/img/posts/20230209/gitpush.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitpush.png" alt="gitpush" class="lazyload" data-proofer-ignore></a></p>
   </li>
   <li>
     <p>首次需要添加 gitee 地址 注意使用 ssh 连接</p>

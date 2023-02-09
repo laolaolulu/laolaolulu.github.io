@@ -4,7 +4,7 @@
   <id>/</id>
   <title>lipeng</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2023-02-09T17:34:29+08:00</updated>
+  <updated>2023-02-09T17:45:49+08:00</updated>
   <author>
     <name>lipeng</name>
     <uri>/</uri>
@@ -24,7 +24,7 @@
     <link href="/posts/Codespaces-gitee/" rel="alternate" type="text/html" title="Codespances使用git提交到gitee" />
     <published>2023-02-09T00:00:00+08:00</published>
   
-    <updated>2023-02-09T17:11:00+08:00</updated>
+    <updated>2023-02-09T17:34:42+08:00</updated>
   
     <id>/posts/Codespaces-gitee/</id>
     <content src="/posts/Codespaces-gitee/" />
@@ -44,7 +44,7 @@
 
 
 
-      本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库
+      本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库
 
 
   使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)
@@ -57,12 +57,13 @@
     创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)
 
     cd ~/.ssh/ #转到.ssh目录
-ssh-keygen -t ed25519 -C "xxxxx@xxxxx.com" #创建ssh密钥 *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过
+ssh-keygen -t ed25519 -C "xxxxx@xxxxx.com" #创建ssh密钥
+# *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过
 cat ~/.ssh/id_ed25519.pub #查看公钥
     
   
   
-    向 gitee 添加 ssh 公钥,这个连接去配置(https://gitee.com/pr...
+    向 gitee 添加 ssh 公钥,点个连接去配置https://gitee.co...
     </summary>
   
 
