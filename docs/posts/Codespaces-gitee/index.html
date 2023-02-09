@@ -38,8 +38,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Codespances使用git提交到gitee" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="测试 git 图片" />
-<meta property="og:description" content="测试 git 图片" />
+<meta name="description" content="本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库" />
+<meta property="og:description" content="本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库" />
 <link rel="canonical" href="/posts/Codespaces-gitee/" />
 <meta property="og:url" content="/posts/Codespaces-gitee/" />
 <meta property="og:site_name" content="lipeng" />
@@ -48,7 +48,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Codespances使用git提交到gitee" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-09T00:00:00+08:00","datePublished":"2023-02-09T00:00:00+08:00","description":"测试 git 图片","headline":"Codespances使用git提交到gitee","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Codespaces-gitee/"},"url":"/posts/Codespaces-gitee/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-09T17:11:00+08:00","datePublished":"2023-02-09T00:00:00+08:00","description":"本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库","headline":"Codespances使用git提交到gitee","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/Codespaces-gitee/"},"url":"/posts/Codespaces-gitee/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -740,6 +740,74 @@
     
 
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+      
+
+      
+
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
+
+    
+      <!-- create the image wrapper -->
+      
+    
+
+    <!-- combine -->
+    
+
+  
 
   
 
@@ -762,6 +830,41 @@
 
   
   
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
 
   
 
@@ -806,6 +909,26 @@
 
     <!-- lastmod date -->
     
+    <span>
+      Updated
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1675933860"
+    data-df="ll"
+    data-toggle="tooltip" data-placement="bottom">
+  Feb  9, 2023
+</em>
+
+    </span>
+    
 
   
 
@@ -847,7 +970,7 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="11 words">
+  title="285 words">
   <em>1 min</em> read</span>
 
     </div>
@@ -857,14 +980,74 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <p><a href="/assets/preview.gif" class="popup img-link "><img data-src="/assets/preview.gif" alt="测试git图片1" class="lazyload" data-proofer-ignore></a>
-<em>测试 git 图片</em></p>
+  <p>本文讲解在 Codespances(https://github.com/codespaces)工具中如何提交代码到gitee仓库</p>
 
-<p><a href="/assets/preview.webp" class="popup img-link "><img data-src="/assets/preview.webp" alt="img-webp" class="lazyload" data-proofer-ignore></a>
-<em>测试 git 图片</em></p>
+<ul>
+  <li>使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)</li>
+</ul>
 
-<p><a href="/assets/preview.mp4" class="popup img-link "><img data-src="/assets/preview.mp4" alt="img-mp4" class="lazyload" data-proofer-ignore></a>
-_mp4</p>
+<h3 id="向-gitee-添加-ssh-密钥"><span class="mr-2">向 gitee 添加 ssh 密钥</span><a href="#向-gitee-添加-ssh-密钥" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li>
+    <p>创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> ~/.ssh/ <span class="c">#转到.ssh目录</span>
+ssh-keygen <span class="nt">-t</span> ed25519 <span class="nt">-C</span> <span class="s2">"xxxxx@xxxxx.com"</span> <span class="c">#创建ssh密钥 *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过</span>
+<span class="nb">cat</span> ~/.ssh/id_ed25519.pub <span class="c">#查看公钥</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>向 gitee 添加 ssh 公钥,这个连接去配置(https://gitee.com/profile/sshkeys)</p>
+
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ssh <span class="nt">-T</span> git@gitee.com <span class="c">#测试配置是否成功 #成功显示 Hi XXX! You've successfully authenticated, but Gitee.com does not provide shell access.</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>如果出现错误 :</p>
+
+    <blockquote>
+      <p>git@gitee.com: Permission denied (publickey) {: .prompt-danger }</p>
+    </blockquote>
+
+    <p>请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加</p>
+  </li>
+</ol>
+
+<h3 id="codespances-中-git-操作"><span class="mr-2">Codespances 中 git 操作</span><a href="#codespances-中-git-操作" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li>
+    <p>git add.
+<a href="/assets/img/posts/20230209/gitadd.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitadd.png" alt="gitadd" class="lazyload" data-proofer-ignore></a></p>
+  </li>
+  <li>
+    <p>git commit
+<a href="/assets/img/posts/20230209/gitcommit.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitcommit.png" alt="gitcommit" class="lazyload" data-proofer-ignore></a></p>
+  </li>
+  <li>
+    <p>git push
+<a href="/assets/img/posts/20230209/gitpush.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/gitpush.png" alt="gitpush" class="lazyload" data-proofer-ignore></a></p>
+  </li>
+  <li>
+    <p>首次需要添加 gitee 地址 注意使用 ssh 连接</p>
+
+    <ul>
+      <li>输入 gitee 仓库的 ssh 连接=&gt;回车</li>
+      <li>输入远程仓库名称(随意)=&gt;回车</li>
+      <li>完成推送
+<a href="/assets/img/posts/20230209/addremote.png" class="popup img-link "><img data-src="/assets/img/posts/20230209/addremote.png" alt="addremote" class="lazyload" data-proofer-ignore></a></li>
+    </ul>
+  </li>
+</ol>
 
 </div>
 
@@ -966,6 +1149,20 @@ _mp4</p>
 
 
 
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">Recently Updated</div>
+    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+      
+        
+        
+        
+      <li><a href="/posts/Codespaces-gitee/">Codespances使用git提交到gitee</a></li>
+      
+    </ul>
+  </div> <!-- #access-lastmod -->
+
+
+
       
 
 
@@ -1013,6 +1210,14 @@ _mp4</p>
       
 
 
+
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading pl-3 pt-2 mb-2">Contents</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
 
 
     
