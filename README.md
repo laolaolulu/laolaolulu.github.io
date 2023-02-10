@@ -10,6 +10,5 @@ jekyll s
 ### 打包发布
 
 ```
-jekyll b --destination=docs
+JEKYLL_ENV=production jekyll b --destination=docs
 ```
-
