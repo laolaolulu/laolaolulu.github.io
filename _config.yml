@@ -10,7 +10,7 @@ baseurl: ""
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: zh-CN
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Shanghai
@@ -18,12 +18,11 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: lipeng # the main title
+title: 劳劳碌碌 # the main title
 
 tagline: 个人博客-技术分享 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ""
@@ -53,7 +52,7 @@ google_site_verification: # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: # fill in your Google Analytics ID
+  id: G-24NHVGL929 # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -98,11 +97,11 @@ comments:
   giscus:
     repo: laolaolulu/laolaolulu.github.io # <gh-username>/<repo>
     repo_id: R_kgDOI7nPiQ
-    category: Announcements
-    category_id: DIC_kwDOI7nPic4CUHB9
+    category: General
+    category_id: DIC_kwDOI7nPic4CUHB-
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
+    lang: zh-CN # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
