@@ -96,10 +96,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: laolaolulu/laolaolulu.github.io # <gh-username>/<repo>
+    repo_id: R_kgDOI7nPiQ
+    category: Announcements
+    category_id: DIC_kwDOI7nPic4CUHB9
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
