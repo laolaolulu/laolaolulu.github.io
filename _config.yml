@@ -110,6 +110,7 @@ comments:
 assets:
   self_host:
     enabled: true # boolean, keep empty means false
+    
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development|production]
