@@ -27,9 +27,7 @@ _使用 github 库创建 Codespances 空间(不需要任何配置直接就能提
     > git@gitee.com: Permission denied (publickey)
     {: .prompt-danger }
 
-    请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加
-    > Example line for prompt.
-{: .prompt-info }
+    请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加 
 
 ### Codespances 中 git 操作
 1.  git add.
@@ -45,9 +43,8 @@ _使用 github 库创建 Codespances 空间(不需要任何配置直接就能提
 ![gitpush](gitpush.png)
 
 4. 首次需要添加 gitee 地址 注意使用 ssh 连接
-
-- 输入 gitee 仓库的 ssh 连接=>回车
-- 输入远程仓库名称(随意)=>回车
-- 完成推送
+    - 输入 gitee 仓库的 ssh 连接=>回车
+    - 输入远程仓库名称(随意)=>回车
+    - 完成推送
 
 ![addremote](addremote.png)
