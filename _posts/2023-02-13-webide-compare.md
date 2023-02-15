@@ -30,9 +30,9 @@ _<https://ide.aliyun.com/>_
 - 环境配置不完善,node 默认还是 12(自带版本管理工具),很多开发环境需要自行安装
 - 空间停止(会自动)后重新进入你的任何配置都还原了
 
-  ![addremote](devstudio-index.png)
+![addremote](devstudio-index.png)
 
-  ![addremote](devstudio-code.png)
+![addremote](devstudio-code.png)
 
 ### 华为 CloudIDE
 
@@ -47,12 +47,12 @@ _<https://github.com/codespaces>_
 - 开发环境全是最新
 - 基本上不需要做任何配置就能进行开发
 
-  ![addremote](codespaces-index.png)
+![addremote](codespaces-index.png)
 
-  ![addremote](codespaces-code.png)
+![addremote](codespaces-code.png)
 
-  ![addremote](codespaces-cost.png)
+![addremote](codespaces-cost.png)
 
-  ### 总结
+### 总结
 
-  只体验了一遍通用开发环境,用 vs code 的推荐上手;没有完全白嫖的,建议国内大厂出个开源免费使用模式:例如使用自家的 git 仓库,开源库可免费使用;或者放大免费使用时间平均每天免费 4 小时左右...
+只体验了一遍通用开发环境,用 vs code 的推荐上手;没有完全白嫖的,建议国内大厂出个开源免费使用模式:例如使用自家的 git 仓库,开源库可免费使用;或者放大免费使用时间平均每天免费 4 小时左右...
