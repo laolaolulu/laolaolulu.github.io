@@ -81,7 +81,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "assets/img/avatar.jfif"
+avatar: "assets/img/favicons/apple-touch-icon.png"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
@@ -96,7 +96,7 @@ comments:
     repo: # <gh-username>/<repo>
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
-  giscus:
+  giscus: #github评论系统配置
     repo: laolaolulu/laolaolulu.github.io # <gh-username>/<repo>
     repo_id: R_kgDOI7nPiQ
     category: General
@@ -110,7 +110,7 @@ comments:
 assets:
   self_host:
     enabled: true # boolean, keep empty means false
-    
+
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development|production]
