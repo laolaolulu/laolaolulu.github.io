@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://laolaolulu.github.io/sitemap.xml
+Sitemap: https://laolaolulu.gitee.io/sitemap.xml
