@@ -1,1 +1,157 @@
-[ { "title": "无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称", "url": "/posts/set-jekyll_env-error/", "categories": "错误笔记", "tags": "jekyll-theme-chirpy, jekyll", "date": "2023-10-15 00:00:00 +0800", "snippet": "JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然后再试一次。所在位置 行:1 字符: 1+ JEKYLL_ENV=production+ ~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo ...", "content": "JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然后再试一次。所在位置 行:1 字符: 1+ JEKYLL_ENV=production+ ~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo : ObjectNotFound: (JEKYLL_ENV=production:String) [], CommandNotFoundException + FullyQualifiedErrorId : CommandNotFoundException原因这是 linux 环境设置环境变量的语法，我是在 windows 下执行的自然报错解决方案windows 下 powershell 设置环境变量语法$env:JEKYLL_ENV=\"production\"" }, { "title": "耳机孔被堵塞了导致声音变小怎么办", "url": "/posts/life-headset/", "categories": "奇技淫巧", "tags": "生活小窍门", "date": "2023-10-15 00:00:00 +0800", "snippet": "耳机孔被堵塞了导致声音变小怎么办?尝试下用软牙刷反复刷几次应该就好了", "content": "耳机孔被堵塞了导致声音变小怎么办?尝试下用软牙刷反复刷几次应该就好了" }, { "title": "jekyll-theme-chirpy主题文章最后更新时间为空怎么回事", "url": "/posts/jekyll-theme-chirpy-last_modified_at/", "categories": "错误笔记", "tags": "jekyll-theme-chirpy, last_modified_at", "date": "2023-10-15 00:00:00 +0800", "snippet": "jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有原因官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的解决方案手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码group :jekyll_plugins...", "content": "jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有原因官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的解决方案手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码group :jekyll_plugins do gem \"jekyll-last-modified-at\"end执行bundle安装一下，然后再执行jekyll b编译文章就有最后更新时间了" }, { "title": "Hyper-V虚拟机Ubuntu中访问windows中的文件", "url": "/posts/hyperv-ubuntu-share/", "categories": "奇技淫巧", "tags": "Hyper-V, Ubuntu", "date": "2023-10-13 00:00:00 +0800", "snippet": "最方便便捷的方法还是使用 windows 文件共享方式Hyper-V中的Ubuntu之间如何访问共享文件以及注意事项 Windows 下设置共享文件夹或者某个盘都可以需要共享的文件夹=&gt;右键=&gt;属性=&gt;共享 点击共享按钮选择用户(建议不要使用 Everyone，直接使用当前 windows 登录的用户) 获取 windows 下的虚拟网卡的 ip 地址(我也尝试直接使用...", "content": "最方便便捷的方法还是使用 windows 文件共享方式Hyper-V中的Ubuntu之间如何访问共享文件以及注意事项 Windows 下设置共享文件夹或者某个盘都可以需要共享的文件夹=&gt;右键=&gt;属性=&gt;共享 点击共享按钮选择用户(建议不要使用 Everyone，直接使用当前 windows 登录的用户) 获取 windows 下的虚拟网卡的 ip 地址(我也尝试直接使用计算机名称但是不成功的) 到 Ubuntu 下执行命令 sudo mount -t cifs 共享文件夹的路径 需要挂载的文件夹 -o username=用户名,password=密码 共享文件夹的路径：在 windows 下设置成功后共享窗口中有个网络路径复制过来将电脑的名称修改为虚拟网卡 ip 地址，我这里是//172.26.144.1/app 需要挂载的文件夹：也就是你在 Ubuntu 下的访问路径(随意设置)，我这里是/mnt/app 成功后就在 Ubuntu 里访问挂载的路径就能看到 windows 下共享的文件夹了 若需要重启后还有效(长期使用),那么需要在/etc/fstab文件后添加一行代码 //172.26.144.1/app /mnt/app cifs auto,username=用户名,password=密码,dir_mode=0777,file_mode=0777 0 0 将你自己的信息替换进去，至于如何修改 ubuntu 文件你可以大显身手什么 vim 命令啦，不过我喜欢使用nano sudo nano /etc/fstab ubuntu 下执行命令失败提示什么没安装就执行安装命令就行了如果某天你突然发现失效了那查下是不是你虚拟网卡 ip 地址变了" }, { "title": "Hyper-V快速安装的Ubuntu有时候登录(xrdp)连接没任何反应", "url": "/posts/hyperv-ubuntu-connection-error/", "categories": "错误笔记", "tags": "Hyper-V, Ubuntu, xrdp", "date": "2023-10-13 00:00:00 +0800", "snippet": "Hyper-V 通过快速安装官方提供的 Ubuntu 有时候登录(默认使用 xrdp)连接显示纯色背景没任何反应原因因为 xrdp 远程连接时之前你登录的 ubuntu 账号未注销导致解决方案点击菜单栏基本会话图标按钮，进入 ubuntu 系统后注销之前登录的账号，再次点击增强会话图标按钮重新登录(xrdp)就行了", "content": "Hyper-V 通过快速安装官方提供的 Ubuntu 有时候登录(默认使用 xrdp)连接显示纯色背景没任何反应原因因为 xrdp 远程连接时之前你登录的 ubuntu 账号未注销导致解决方案点击菜单栏基本会话图标按钮，进入 ubuntu 系统后注销之前登录的账号，再次点击增强会话图标按钮重新登录(xrdp)就行了" }, { "title": "2023年各大厂WebIDE(CloudStudio、DevStudio、Codespaces)使用对比", "url": "/posts/webide-compare/", "categories": "短中取长", "tags": "WebIDE, CloudStudio, DevStudio, Codespaces", "date": "2023-02-13 00:00:00 +0800", "snippet": "本人抱着颗白嫖的心态撸了一遍各大厂的 WebIDE(CloudStudio、DevStudio、Codespaces) 工具,现分享下白嫖经验腾讯 CloudStudiohttps://cloudstudio.net/ 最花里胡哨的工具,建库很多模板有不同的操作系统(Red Ubuntu),模板没尝试完… 该有的环境常用的工具都安装好了(最新长期稳定版) 每月能白嫖 1000 分钟(所...", "content": "本人抱着颗白嫖的心态撸了一遍各大厂的 WebIDE(CloudStudio、DevStudio、Codespaces) 工具,现分享下白嫖经验腾讯 CloudStudiohttps://cloudstudio.net/ 最花里胡哨的工具,建库很多模板有不同的操作系统(Red Ubuntu),模板没尝试完… 该有的环境常用的工具都安装好了(最新长期稳定版) 每月能白嫖 1000 分钟(所有仓库空间共用),然后 1 毛钱一分钟;包月 300阿里 DevStudiohttps://ide.aliyun.com/ 目前为止处于测试阶段可以完全白嫖但不知道正式版收费如何 有完善的 java 开发环境 环境配置不完善,node 默认还是 12(自带版本管理工具),很多开发环境需要自行安装 空间停止(会自动)后重新进入你的任何配置都还原了华为 CloudIDE免费开通,结果我点了提示余额不足;我这个白嫖党为了感受华为带来的神秘感特意充值 1 元,结果还是余额不足放弃体验……微软 Codespaceshttps://github.com/codespaces 只能使用 github 仓库初始化(进去用 git 想怎么提交都行) 每月免费 60 小时,超出后 0.18 美元一小时 (1.23 元) 开发环境全是最新 基本上不需要做任何配置就能进行开发总结只体验了一遍通用开发环境,用 vs code 的推荐上手;没有完全白嫖的,建议国内大厂出个开源免费使用模式:例如使用自家的 git 仓库,开源库可免费使用;或者放大免费使用时间平均每天免费 4 小时左右…" }, { "title": "Codespances使用git提交到gitee", "url": "/posts/codespaces-gitee/", "categories": "奇技淫巧", "tags": "Codespances, git, gitee", "date": "2023-02-09 00:00:00 +0800", "snippet": "本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)向 gitee 添加 ssh 密钥 创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)cd ~/.ssh/ #转到.ssh目录s...", "content": "本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)向 gitee 添加 ssh 密钥 创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)cd ~/.ssh/ #转到.ssh目录ssh-keygen -t ed25519 -C \"xxxxx@xxxxx.com\" #创建ssh密钥# *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过cat ~/.ssh/id_ed25519.pub #查看公钥 向 gitee 添加 ssh 公钥,点这个连接去配置 https://gitee.com/profile/sshkeysssh -T git@gitee.com #测试配置是否成功#成功显示 Hi XXX! You've successfully authenticated, but Gitee.com does not provide shell access. 如果出现错误 : git@gitee.com: Permission denied (publickey) 请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加 Codespances 中 git 操作 git add. git commit git push 首次需要添加 gitee 地址 注意使用 ssh 连接 - 输入 gitee 仓库的 ssh 连接=&gt;回车 - 输入远程仓库名称(随意)=&gt;回车 - 完成推送" } ]
+[
+  
+  {
+    "title": "使用Emscripten将Opencv代码编译为OpenCV.js(WebAssembly)",
+    "url": "/posts/emscripten-opencv/",
+    "categories": "人脸识别",
+    "tags": "opencv, emscripten, onnx",
+    "date": "2023-10-23 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "编译OpenCV.js注意用 linux 环境,windows 下各种错误我已放弃  Emscripten官方安装文档  OpenCV.js官方编译文档# Get the emsdk repogit clone https://github.com/emscripten-core/emsdk.git# Enter that directorycd emsdk# Fetch the lates...",
+    "content": "编译OpenCV.js注意用 linux 环境,windows 下各种错误我已放弃  Emscripten官方安装文档  OpenCV.js官方编译文档# Get the emsdk repogit clone https://github.com/emscripten-core/emsdk.git# Enter that directorycd emsdk# Fetch the latest version of the emsdk (not needed the first time you clone)git pull# Download and install the latest SDK tools../emsdk install latest# Make the \"latest\" SDK \"active\" for the current user. (writes .emscripten file)./emsdk activate latest# Activate PATH and other environment variables in the current terminalsource ./emsdk_env.sh# 拉取opencv代码仓库git clone https://github.com/opencv/opencv.git# 编译opencv.js 很慢需要等一个小时以上emcmake python3 ./opencv/platforms/js/build_js.py build_js  安装完成后每次重启终端都需要执行 source ./emsdk_env.sh  既然是自行编译那当然要高度定制化了,opencv_js.config.py这个配置文件中你不需要使用的函数都可以删掉然后再编译大概能压缩到2M左右错误处理      ./emsdk: /bin/sh^M: bad interpreter: No such file or directory    我使用的 windows 下 git clone 的 emsdk,然后再 ubuntu 下执行就报这个错误,应该是 windows 下拉取的文件的结尾换行与 linux 下的不一样导致;去 linux 环境下重新 git clone 就好了        'emcmake' launcher or specify it either by EMSCRIPTEN environment variable or --emscripten_dir option.    请手动配置下环境变量 environment注意不是emsdk目录     export EMSCRIPTEN=/mnt/d/lipeng/emsdk/upstream/emscripten            build_js.py: error: unrecognized arguments: -DCMAKE_TOOLCHAIN_FILE=/mnt/d/lipeng/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake -DCMAKE_CROSSCOMPILING_EMULATOR=/mnt/d/lipeng/emsdk/node/16.20.0_64bit/bin/node    请在platforms\\js\\build_js.py文件中添加以下代码     parser.add_argument(\"--webnn\", action=\"store_true\", help=\"Enable WebNN Backend\") + parser.add_argument(\"-DCMAKE_TOOLCHAIN_FILE\", default=\"\", help=\"DCMAKE_TOOLCHAIN_FILE\") + parser.add_argument(\"-DCMAKE_CROSSCOMPILING_EMULATOR\",default=\"\",help=\"DCMAKE_CROSSCOMPILING_EMULATOR\")    args = parser.parse_args()     log.debug(\"Args: %s\", args)      推理onnx模型  一些轻量级的频繁推理模型建议放前端客户端进行计算,可以节约图片频繁传递到后端导致流量带宽的巨大消耗;例如人脸识别功能,这里使用opencv.js来推理scrfd;  官方scrfd代码推理中用了网络对象中的getUnconnectedOutLayersNames这个函数,而opencv.js编译配置文件中没有这个函数,需要再配置文件opencv_js.config.py中添加进去重新编译    \"dnn_Net\": [        \"setInput\",        \"forward\",        \"setPreferableBackend\",      + \"getUnconnectedOutLayersNames\",    ],      opencv.js编译getUnconnectedOutLayersNames过程中错误处理      error: no member named 'vectorstd' in namespace 'std'    这个错误有点像是字符串拼接出了问题,把本应该是vector&lt;std::string&gt;转换成了vectorstd::string,尖括号被转没了;于是我在源码里找呀找到处debug,终于找到了一处modules\\js\\generator\\embindgen.py修改了下    for key in type_dict:             if key in ret_type:                 - ret_type = re.sub('(^|[^\\w])' + key + '($|[^\\w])', type_dict[key], ret_type)                 + ret_type = re.sub(r\"\\b\" + key + r\"\\b\", type_dict[key], ret_type)            编译通过了但调用发生了异常\"Cannot call dnn_Net.getUnconnectedOutLayersNames due to unbound types: NSt3__26vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEEE\"    需要在modules\\js\\src\\core_bindings.cpp绑定个类型     register_vector&lt;float&gt;(\"FloatVector\"); register_vector&lt;double&gt;(\"DoubleVector\"); + register_vector&lt;std::string&gt;(\"StringVector\"); register_vector&lt;cv::Point&gt;(\"PointVector\");      简单写几句代码//先根据模型训练时提供的图片进行预处理(步骤省略)const blob = cv.blobFromImage(dst, 1.0 / 128, inpSize, new cv.Scalar(127.5, 127.5, 127.5), true);const name = 'scrfd.onnx';cv.FS_createDataFile('/', name, new Uint8Array(onnxdata), true, false);const netScrfd = cv.readNetFromONNX(name);//加载模型const net = netScrfd.setInput(blob);const vnames = netScrfd.getUnconnectedOutLayersNames();const names = Array.from({ length: vnames.size() }, (_, index) =&gt; vnames.get(index));const outs = new cv.MatVector();netScrfd.forward2(outs, names);//outs返回值根据模型的输出数据结构解析就对了"
+  },
+  
+  {
+    "title": "C#(sharp)使用Opencv推理SCRFD模型",
+    "url": "/posts/csharp-scrfd-opencv/",
+    "categories": "人脸识别",
+    "tags": "OpenCvSharp4, SCRFD",
+    "date": "2023-10-20 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库)  SCRFD官方介绍  OpenCvSharp4官网简介错误笔记  System.TypeInitializationException:“The type initializer for 'OpenCvSharp.Internal.NativeMethods' threw an exception.” DllNotFoun...",
+    "content": "使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库)  SCRFD官方介绍  OpenCvSharp4官网简介错误笔记  System.TypeInitializationException:“The type initializer for 'OpenCvSharp.Internal.NativeMethods' threw an exception.” DllNotFoundException: Unable to load DLL 'OpenCvSharpExtern' or one of its dependencies: 找不到指定的模块。 (0x8007007E)使用OpenCvSharp4还需要安装一个(OpenCvSharp4.runtime.*),如果你是 windows 环境下运行就安装OpenCvSharp4.runtime.win  Mat [ 0*0*CV_8UC1, IsContinuous=False, IsSubmatrix=False, Ptr=0x2356878e5c0, Data=0x0请注意如果你传入的图片路径无效那么读取时不会报错,返回的 Mat 对象的 Data 为 0"
+  },
+  
+  {
+    "title": "无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称",
+    "url": "/posts/set-jekyll_env-error/",
+    "categories": "错误笔记",
+    "tags": "jekyll-theme-chirpy, jekyll",
+    "date": "2023-10-15 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然后再试一次。所在位置 行:1 字符: 1+ JEKYLL_ENV=production+ ~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo        ...",
+    "content": "JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然后再试一次。所在位置 行:1 字符: 1+ JEKYLL_ENV=production+ ~~~~~~~~~~~~~~~~~~~~~    + CategoryInfo          : ObjectNotFound: (JEKYLL_ENV=production:String) [], CommandNotFoundException    + FullyQualifiedErrorId : CommandNotFoundException原因这是 linux 环境设置环境变量的语法，我是在 windows 下执行的自然报错解决方案windows 下 powershell 设置环境变量语法$env:JEKYLL_ENV=\"production\""
+  },
+  
+  {
+    "title": "耳机孔被堵塞了导致声音变小怎么办",
+    "url": "/posts/life-headset/",
+    "categories": "生活窍门",
+    "tags": "",
+    "date": "2023-10-15 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "耳机孔被堵塞了导致声音变小怎么办?尝试下用软牙刷反复刷几次应该就好了",
+    "content": "耳机孔被堵塞了导致声音变小怎么办?尝试下用软牙刷反复刷几次应该就好了"
+  },
+  
+  {
+    "title": "jekyll-theme-chirpy主题文章最后更新时间为空怎么回事",
+    "url": "/posts/jekyll-theme-chirpy-last_modified_at/",
+    "categories": "错误笔记",
+    "tags": "jekyll-theme-chirpy, last_modified_at",
+    "date": "2023-10-15 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有原因官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的解决方案手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码group :jekyll_plugins...",
+    "content": "jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有原因官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的解决方案手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码group :jekyll_plugins do  gem \"jekyll-last-modified-at\"end执行bundle安装一下，然后再执行jekyll b编译文章就有最后更新时间了"
+  },
+  
+  {
+    "title": "Hyper-V虚拟机Ubuntu中访问windows中的文件",
+    "url": "/posts/hyperv-ubuntu-share/",
+    "categories": "雕虫小技",
+    "tags": "Hyper-V, Ubuntu",
+    "date": "2023-10-13 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "最方便便捷的方法还是使用 windows 文件共享方式  Windows 下设置共享文件夹或者某个盘都可以需要共享的文件夹=&gt;右键=&gt;属性=&gt;共享 点击共享按钮选择用户(建议不要使用 Everyone，直接使用当前 windows 登录的用户)  获取 windows 下的虚拟网卡的 ip 地址(我也尝试直接使用计算机名称但是不成功的)      到 Ubuntu 下执行命...",
+    "content": "最方便便捷的方法还是使用 windows 文件共享方式  Windows 下设置共享文件夹或者某个盘都可以需要共享的文件夹=&gt;右键=&gt;属性=&gt;共享 点击共享按钮选择用户(建议不要使用 Everyone，直接使用当前 windows 登录的用户)  获取 windows 下的虚拟网卡的 ip 地址(我也尝试直接使用计算机名称但是不成功的)      到 Ubuntu 下执行命令     sudo mount -t cifs 共享文件夹的路径 需要挂载的文件夹 -o username=用户名,password=密码        共享文件夹的路径：在 windows 下设置成功后共享窗口中有个网络路径复制过来将电脑的名称修改为虚拟网卡 ip 地址，我这里是//172.26.144.1/app    需要挂载的文件夹：也就是你在 Ubuntu 下的访问路径(随意设置)，我这里是/mnt/app    成功后就在 Ubuntu 里访问挂载的路径就能看到 windows 下共享的文件夹了    若需要重启后还有效(长期使用),那么需要在/etc/fstab文件后添加一行代码    //172.26.144.1/app    /mnt/app    cifs    auto,username=用户名,password=密码,dir_mode=0777,file_mode=0777    0 0        将你自己的信息替换进去，至于如何修改 ubuntu 文件你可以大显身手什么 vim 命令啦，不过我喜欢使用nano    sudo nano /etc/fstab      ubuntu 下执行命令失败提示什么没安装就执行安装命令就行了如果某天你突然发现失效了那查下是不是你虚拟网卡 ip 地址变了"
+  },
+  
+  {
+    "title": "Hyper-V快速安装的Ubuntu有时候登录(xrdp)连接没任何反应",
+    "url": "/posts/hyperv-ubuntu-connection-error/",
+    "categories": "错误笔记",
+    "tags": "Hyper-V, Ubuntu, xrdp",
+    "date": "2023-10-13 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "原因因为 xrdp 远程连接时之前你登录的 ubuntu 账号未注销导致解决方案点击菜单栏基本会话图标按钮，进入 ubuntu 系统后注销之前登录的账号，再次点击增强会话图标按钮重新登录(xrdp)就行了",
+    "content": "原因因为 xrdp 远程连接时之前你登录的 ubuntu 账号未注销导致解决方案点击菜单栏基本会话图标按钮，进入 ubuntu 系统后注销之前登录的账号，再次点击增强会话图标按钮重新登录(xrdp)就行了"
+  },
+  
+  {
+    "title": "2023年各大厂WebIDE(CloudStudio、DevStudio、Codespaces)使用对比",
+    "url": "/posts/webide-compare/",
+    "categories": "短中取长",
+    "tags": "WebIDE, CloudStudio, DevStudio, Codespaces",
+    "date": "2023-02-13 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "本人抱着颗白嫖的心态撸了一遍各大厂的 WebIDE(CloudStudio、DevStudio、Codespaces) 工具,现分享下白嫖经验腾讯 CloudStudiohttps://cloudstudio.net/  最花里胡哨的工具,建库很多模板有不同的操作系统(Red Ubuntu),模板没尝试完…  该有的环境常用的工具都安装好了(最新长期稳定版)  每月能白嫖 1000 分钟(所...",
+    "content": "本人抱着颗白嫖的心态撸了一遍各大厂的 WebIDE(CloudStudio、DevStudio、Codespaces) 工具,现分享下白嫖经验腾讯 CloudStudiohttps://cloudstudio.net/  最花里胡哨的工具,建库很多模板有不同的操作系统(Red Ubuntu),模板没尝试完…  该有的环境常用的工具都安装好了(最新长期稳定版)  每月能白嫖 1000 分钟(所有仓库空间共用),然后 1 毛钱一分钟;包月 300阿里 DevStudiohttps://ide.aliyun.com/  目前为止处于测试阶段可以完全白嫖但不知道正式版收费如何  有完善的 java 开发环境  环境配置不完善,node 默认还是 12(自带版本管理工具),很多开发环境需要自行安装  空间停止(会自动)后重新进入你的任何配置都还原了华为 CloudIDE免费开通,结果我点了提示余额不足;我这个白嫖党为了感受华为带来的神秘感特意充值 1 元,结果还是余额不足放弃体验……微软 Codespaceshttps://github.com/codespaces  只能使用 github 仓库初始化(进去用 git 想怎么提交都行)  每月免费 60 小时,超出后 0.18 美元一小时 (1.23 元)  开发环境全是最新  基本上不需要做任何配置就能进行开发总结只体验了一遍通用开发环境,用 vs code 的推荐上手;没有完全白嫖的,建议国内大厂出个开源免费使用模式:例如使用自家的 git 仓库,开源库可免费使用;或者放大免费使用时间平均每天免费 4 小时左右…"
+  },
+  
+  {
+    "title": "Codespances使用git提交到gitee",
+    "url": "/posts/codespaces-gitee/",
+    "categories": "雕虫小技",
+    "tags": "Codespances, git, gitee",
+    "date": "2023-02-09 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)向 gitee 添加 ssh 密钥      创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)    cd ~/.ssh/ #转...",
+    "content": "本文讲解在 Codespances(https://github.com/codespaces) 工具中如何提交代码到 gitee 仓库使用 github 库创建 Codespances 空间(不需要任何配置直接就能提交到 github)向 gitee 添加 ssh 密钥      创建 ssh 密钥方式 gitee 进行验证 (https 方式未尝试成功)    cd ~/.ssh/ #转到.ssh目录ssh-keygen -t ed25519 -C \"xxxxx@xxxxx.com\" #创建ssh密钥# *敲三次回车(默认参数都为空),之前我输入一些参数后创建的密钥验证不过cat ~/.ssh/id_ed25519.pub #查看公钥            向 gitee 添加 ssh 公钥,点这个连接去配置 https://gitee.com/profile/sshkeys    ssh -T git@gitee.com #测试配置是否成功#成功显示 Hi XXX! You've successfully authenticated, but Gitee.com does not provide shell access.                  git@gitee.com: Permission denied (publickey)        请检查上述注意事项:创建密钥时参数都为空、添加 gitee 公钥不要在仓库添加  Codespances 中 git 操作      git add.            git commit            git push            首次需要添加 gitee 地址 注意使用 ssh 连接 - 输入 gitee 仓库的 ssh 连接=&gt;回车 - 输入远程仓库名称(随意)=&gt;回车 - 完成推送      "
+  }
+  
+]
+

@@ -1,1 +1,255 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>https://laolaolulu.github.io/</id><title>laolaolulu</title><subtitle>技术分享</subtitle> <updated>2023-10-18T22:09:52+08:00</updated> <author> <name>lipeng</name> <uri>https://laolaolulu.github.io/</uri> </author><link rel="self" type="application/atom+xml" href="https://laolaolulu.github.io/feed.xml"/><link rel="alternate" type="text/html" hreflang="en" href="https://laolaolulu.github.io/"/> <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator> <rights> © 2023 lipeng </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> <entry><title>无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称</title><link href="https://laolaolulu.github.io/posts/set-jekyll_env-error/" rel="alternate" type="text/html" title="无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称" /><published>2023-10-15T00:00:00+08:00</published> <updated>2023-10-16T18:06:59+08:00</updated> <id>https://laolaolulu.github.io/posts/set-jekyll_env-error/</id> <content src="https://laolaolulu.github.io/posts/set-jekyll_env-error/" /> <author> <name>lipeng</name> </author> <category term="错误笔记" /> <summary> JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然 后再试一次。 所在位置 行:1 字符: 1 + JEKYLL_ENV=production + ~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo : ObjectNotFound: (JEKYLL_ENV=production:String) [], CommandNotFoundException + FullyQualifiedErrorId : CommandNotFoundException 原因 这是 linux 环境设置环境变量的语法，我是在 windows 下执行的自然报错 解决方案 windo... </summary> </entry> <entry><title>耳机孔被堵塞了导致声音变小怎么办</title><link href="https://laolaolulu.github.io/posts/life-headset/" rel="alternate" type="text/html" title="耳机孔被堵塞了导致声音变小怎么办" /><published>2023-10-15T00:00:00+08:00</published> <updated>2023-10-15T11:07:53+08:00</updated> <id>https://laolaolulu.github.io/posts/life-headset/</id> <content src="https://laolaolulu.github.io/posts/life-headset/" /> <author> <name>lipeng</name> </author> <category term="奇技淫巧" /> <summary> 耳机孔被堵塞了导致声音变小怎么办? 尝试下用软牙刷反复刷几次应该就好了 </summary> </entry> <entry><title>jekyll-theme-chirpy主题文章最后更新时间为空怎么回事</title><link href="https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/" rel="alternate" type="text/html" title="jekyll-theme-chirpy主题文章最后更新时间为空怎么回事" /><published>2023-10-15T00:00:00+08:00</published> <updated>2023-10-15T22:39:39+08:00</updated> <id>https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/</id> <content src="https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/" /> <author> <name>lipeng</name> </author> <category term="错误笔记" /> <summary> jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有 原因 官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的 解决方案 手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码 group :jekyll_plugins do gem "jekyll-last-modified-at" end 执行bundle安装一下，然后再执行jekyll b编译文章就有最后更新时间了 </summary> </entry> <entry><title>Hyper-V虚拟机Ubuntu中访问windows中的文件</title><link href="https://laolaolulu.github.io/posts/hyperv-ubuntu-share/" rel="alternate" type="text/html" title="Hyper-V虚拟机Ubuntu中访问windows中的文件" /><published>2023-10-13T00:00:00+08:00</published> <updated>2023-10-16T17:56:38+08:00</updated> <id>https://laolaolulu.github.io/posts/hyperv-ubuntu-share/</id> <content src="https://laolaolulu.github.io/posts/hyperv-ubuntu-share/" /> <author> <name>lipeng</name> </author> <category term="奇技淫巧" /> <summary> 最方便便捷的方法还是使用 windows 文件共享方式 Hyper-V中的Ubuntu之间如何访问共享文件以及注意事项 Windows 下设置共享文件夹或者某个盘都可以 需要共享的文件夹=&amp;gt;右键=&amp;gt;属性=&amp;gt;共享 点击共享按钮选择用户(建议不要使用 Everyone，直接使用当前 windows 登录的用户) 获取 windows 下的虚拟网卡的 ip 地址(我也尝试直接使用计算机名称但是不成功的) 到 Ubuntu 下执行命令 sudo mount -t cifs 共享文件夹的路径 需要挂载的文件夹 -o username=用户名,password=密码 共享文件夹的路径：在 windows 下设置成功后共享窗口中有个网络路径复制过来将电脑的名称修改为虚拟网卡 ip 地址，我这里是//172.26.14... </summary> </entry> <entry><title>Hyper-V快速安装的Ubuntu有时候登录(xrdp)连接没任何反应</title><link href="https://laolaolulu.github.io/posts/hyperv-ubuntu-connection-error/" rel="alternate" type="text/html" title="Hyper-V快速安装的Ubuntu有时候登录(xrdp)连接没任何反应" /><published>2023-10-13T00:00:00+08:00</published> <updated>2023-10-15T15:28:46+08:00</updated> <id>https://laolaolulu.github.io/posts/hyperv-ubuntu-connection-error/</id> <content src="https://laolaolulu.github.io/posts/hyperv-ubuntu-connection-error/" /> <author> <name>lipeng</name> </author> <category term="错误笔记" /> <summary> Hyper-V 通过快速安装官方提供的 Ubuntu 有时候登录(默认使用 xrdp)连接显示纯色背景没任何反应 原因 因为 xrdp 远程连接时之前你登录的 ubuntu 账号未注销导致 解决方案 点击菜单栏基本会话图标按钮，进入 ubuntu 系统后注销之前登录的账号，再次点击增强会话图标按钮重新登录(xrdp)就行了 </summary> </entry> </feed>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://laolaolulu.github.io/</id>
+  <title>Programmer's Notes</title>
+  <subtitle>Programmer's Notes - Technology Sharing</subtitle>
+  <updated>2023-11-01T00:28:18+08:00</updated>
+  <author>
+    <name>lipeng</name>
+    <uri>https://laolaolulu.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://laolaolulu.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://laolaolulu.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 lipeng </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>使用Emscripten将Opencv代码编译为OpenCV.js(WebAssembly)</title>
+    <link href="https://laolaolulu.github.io/posts/emscripten-opencv/" rel="alternate" type="text/html" title="使用Emscripten将Opencv代码编译为OpenCV.js(WebAssembly)" />
+    <published>2023-10-23T00:00:00+08:00</published>
+  
+    <updated>2023-10-31T23:44:53+08:00</updated>
+  
+    <id>https://laolaolulu.github.io/posts/emscripten-opencv/</id>
+    <content src="https://laolaolulu.github.io/posts/emscripten-opencv/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+    <category term="人脸识别" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      编译OpenCV.js
+注意用 linux 环境,windows 下各种错误我已放弃
+
+  Emscripten官方安装文档
+  OpenCV.js官方编译文档
+
+
+# Get the emsdk repo
+git clone https://github.com/emscripten-core/emsdk.git
+
+# Enter that directory
+cd emsdk
+
+# Fetch the latest version of the emsdk (not needed the first time you clone)
+git pull
+
+# Download and install the latest SDK tools.
+./emsdk install latest
+
+# Make the "latest" SDK "active" for the curren...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>C#(sharp)使用Opencv推理SCRFD模型</title>
+    <link href="https://laolaolulu.github.io/posts/csharp-scrfd-opencv/" rel="alternate" type="text/html" title="C#(sharp)使用Opencv推理SCRFD模型" />
+    <published>2023-10-20T00:00:00+08:00</published>
+  
+    <updated>2023-10-31T23:00:08+08:00</updated>
+  
+    <id>https://laolaolulu.github.io/posts/csharp-scrfd-opencv/</id>
+    <content src="https://laolaolulu.github.io/posts/csharp-scrfd-opencv/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+    <category term="人脸识别" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库)
+
+  SCRFD官方介绍
+  OpenCvSharp4官网简介
+
+
+错误笔记
+
+  System.TypeInitializationException:“The type initializer for 'OpenCvSharp.Internal.NativeMethods' threw an exception.” DllNotFoundException: Unable to load DLL 'OpenCvSharpExtern' or one of its dependencies: 找不到指定的模块。 (0x8007007E)
+使用OpenCvSharp4还需要安装一个(OpenCvSharp4.runtime.*),如果你是 windows 环境下运行就安装OpenCvSharp4.runtime.wi...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称</title>
+    <link href="https://laolaolulu.github.io/posts/set-jekyll_env-error/" rel="alternate" type="text/html" title="无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称" />
+    <published>2023-10-15T00:00:00+08:00</published>
+  
+    <updated>2023-10-31T23:49:12+08:00</updated>
+  
+    <id>https://laolaolulu.github.io/posts/set-jekyll_env-error/</id>
+    <content src="https://laolaolulu.github.io/posts/set-jekyll_env-error/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+    <category term="错误笔记" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      JEKYLL_ENV=production : 无法将“JEKYLL_ENV=production”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确， 然
+后再试一次。
+所在位置 行:1 字符: 1
++ JEKYLL_ENV=production
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (JEKYLL_ENV=production:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+原因
+
+这是 linux 环境设置环境变量的语法，我是在 windows 下执行的自然报错
+
+解决方案
+
+windo...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>耳机孔被堵塞了导致声音变小怎么办</title>
+    <link href="https://laolaolulu.github.io/posts/life-headset/" rel="alternate" type="text/html" title="耳机孔被堵塞了导致声音变小怎么办" />
+    <published>2023-10-15T00:00:00+08:00</published>
+  
+    <updated>2023-10-30T14:51:36+08:00</updated>
+  
+    <id>https://laolaolulu.github.io/posts/life-headset/</id>
+    <content src="https://laolaolulu.github.io/posts/life-headset/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+    <category term="生活窍门" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      耳机孔被堵塞了导致声音变小怎么办?
+
+尝试下用软牙刷反复刷几次应该就好了
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>jekyll-theme-chirpy主题文章最后更新时间为空怎么回事</title>
+    <link href="https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/" rel="alternate" type="text/html" title="jekyll-theme-chirpy主题文章最后更新时间为空怎么回事" />
+    <published>2023-10-15T00:00:00+08:00</published>
+  
+    <updated>2023-10-31T23:50:11+08:00</updated>
+  
+    <id>https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/</id>
+    <content src="https://laolaolulu.github.io/posts/jekyll-theme-chirpy-last_modified_at/" />
+    <author>
+      <name>lipeng</name>
+    </author>
+
+  
+    
+    <category term="错误笔记" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      jekyll-theme-chirpy主题官方示例是有最后更新时间的，自己发布后最后更新时间却没有
+
+原因
+
+官方示例文章的最后更新时间last_modified_at是通过 github 的 workflows 来生成的，自己却用的jekyll b命令来编译的
+
+解决方案
+
+手动安装插件jekyll-last-modified-at：在Gemfile文件中添加代码
+
+group :jekyll_plugins do
+  gem "jekyll-last-modified-at"
+end
+
+
+执行bundle安装一下，然后再执行jekyll b编译文章就有最后更新时间了
+
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

@@ -35,23 +35,24 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Codespaces" />
+<meta property="og:title" content="C#(sharp)使用Opencv推理SCRFD模型" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Programmer’s Notes - Technology Sharing" />
-<meta property="og:description" content="Programmer’s Notes - Technology Sharing" />
-<link rel="canonical" href="https://laolaolulu.github.io/tags/codespaces/" />
-<meta property="og:url" content="https://laolaolulu.github.io/tags/codespaces/" />
+<meta name="description" content="使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库) SCRFD官方介绍 OpenCvSharp4官网简介" />
+<meta property="og:description" content="使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库) SCRFD官方介绍 OpenCvSharp4官网简介" />
+<link rel="canonical" href="https://laolaolulu.github.io/posts/csharp-scrfd-opencv/" />
+<meta property="og:url" content="https://laolaolulu.github.io/posts/csharp-scrfd-opencv/" />
 <meta property="og:site_name" content="Programmer’s Notes" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-20T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Codespaces" />
+<meta property="twitter:title" content="C#(sharp)使用Opencv推理SCRFD模型" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Programmer’s Notes - Technology Sharing","headline":"Codespaces","url":"https://laolaolulu.github.io/tags/codespaces/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-31T23:00:08+08:00","datePublished":"2023-10-20T00:00:00+08:00","description":"使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库) SCRFD官方介绍 OpenCvSharp4官网简介","headline":"C#(sharp)使用Opencv推理SCRFD模型","mainEntityOfPage":{"@type":"WebPage","@id":"https://laolaolulu.github.io/posts/csharp-scrfd-opencv/"},"url":"https://laolaolulu.github.io/posts/csharp-scrfd-opencv/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Codespaces | Programmer's Notes
+  <title>C#(sharp)使用Opencv推理SCRFD模型 | Programmer's Notes
   </title>
 
   <!--
@@ -108,9 +109,16 @@
   <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
 
   
-
+    <link rel="stylesheet" href="/assets/lib/tocbot/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="/assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Manific Popup -->
+    <link rel="stylesheet" href="/assets/lib/magnific-popup/magnific-popup.css">
   
 
   <!-- JavaScript -->
@@ -441,16 +449,10 @@
           
         
           
-            <span>
-              <a href="/tags">
-                Tags
-              </a>
-            </span>
-          
         
           
             
-              <span>Codespaces</span>
+              <span>C#(sharp)使用Opencv推理SCRFD模型</span>
             
 
           
@@ -464,7 +466,7 @@
     </button>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -490,28 +492,102 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              
+              <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
 
 
 
 <article class="px-1">
-  
-    
+  <header>
+    <h1 data-toc-skip>C#(sharp)使用Opencv推理SCRFD模型</h1>
 
-
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    Codespaces
-    <span class="lead text-muted ps-2">1</span>
-  </h1>
-  <ul class="content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/webide-compare/">2023年各大厂WebIDE(CloudStudio、DevStudio、Codespaces)使用对比</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -521,22 +597,212 @@
 
 <time
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1676217600"
+  data-ts="1697731200"
   data-df="ll"
   
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
 >
-  Feb 13, 2023
+  Oct 20, 2023
 </time>
 
-      </li>
-    
-  </ul>
+      </span>
+
+      <!-- lastmod date -->
+      
+      <span>
+        Updated <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1698764408"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Oct 31, 2023
+</time>
+
+      </span>
+       
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+           By
+
+          <em>
+            
+            <a href="https://github.com/laolaolulu">lipeng</a>
+            
+          </em>
+        </span>
+
+        <!-- read time -->
+        <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="133 words"
+>
+  <em>1 min</em> read</span>
+
+      </div>
+      <!-- .d-flex -->
+    </div>
+    <!-- .post-meta -->
+  </header>
+
+  <div class="content"><h1 id="使用c来推理scrfd模型来实现人脸检测只使用opencv库">使用c#来推理SCRFD模型来实现人脸检测(只使用opencv库)</h1>
+<ul>
+  <li><a href="https://github.com/deepinsight/insightface/tree/master/detection/scrfd">SCRFD官方介绍</a></li>
+  <li><a href="https://github.com/shimat/opencvsharp">OpenCvSharp4官网简介</a></li>
+</ul>
+
+<h2 id="错误笔记"><span class="me-2">错误笔记</span><a href="#错误笔记" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">System.TypeInitializationException:“The type initializer for 'OpenCvSharp.Internal.NativeMethods' threw an exception.” DllNotFoundException: Unable to load DLL 'OpenCvSharpExtern' or one of its dependencies: 找不到指定的模块。 (0x8007007E)</code>
+使用<code class="language-plaintext highlighter-rouge">OpenCvSharp4</code>还需要安装一个(OpenCvSharp4.runtime.*),如果你是 windows 环境下运行就安装<code class="language-plaintext highlighter-rouge">OpenCvSharp4.runtime.win</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Mat [ 0*0*CV_8UC1, IsContinuous=False, IsSubmatrix=False, Ptr=0x2356878e5c0, Data=0x0</code>
+请注意如果你传入的图片路径无效那么读取时不会报错,返回的 Mat 对象的 Data 为 0</li>
+</ol>
 </div>
 
-  
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+    <div class="post-meta mb-3">
+      <i class="far fa-folder-open fa-fw me-1"></i>
+      
+      <a
+        href="/categories/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"
+        >人脸识别</a
+      >
+    </div>
+    
+
+    <!-- tags -->
+    
+    <div class="post-tags">
+      <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a
+        href="/tags/opencvsharp4/"
+        class="post-tag no-text-decoration"
+      >OpenCvSharp4</a>
+      
+      <a
+        href="/tags/scrfd/"
+        class="post-tag no-text-decoration"
+      >SCRFD</a>
+      
+    </div>
+    
+
+    <div
+      class="post-tail-bottom d-flex justify-content-between align-items-center mt-5 pb-2"
+    >
+      <div class="license-wrapper">
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author. 
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted me-1">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+      <a
+        href="https://twitter.com/intent/tweet?text=C#(sharp)%E4%BD%BF%E7%94%A8Opencv%E6%8E%A8%E7%90%86SCRFD%E6%A8%A1%E5%9E%8B%20-%20Programmer's%20Notes&url=https%3A%2F%2Flaolaolulu.github.io%2Fposts%2Fcsharp-scrfd-opencv%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Twitter"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"
+      >
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+      
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?title=C#(sharp)%E4%BD%BF%E7%94%A8Opencv%E6%8E%A8%E7%90%86SCRFD%E6%A8%A1%E5%9E%8B%20-%20Programmer's%20Notes&u=https%3A%2F%2Flaolaolulu.github.io%2Fposts%2Fcsharp-scrfd-opencv%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Facebook"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+      
+      <a
+        href="https://t.me/share/url?url=https%3A%2F%2Flaolaolulu.github.io%2Fposts%2Fcsharp-scrfd-opencv%2F&text=C#(sharp)%E4%BD%BF%E7%94%A8Opencv%E6%8E%A8%E7%90%86SCRFD%E6%A8%A1%E5%9E%8B%20-%20Programmer's%20Notes"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Telegram"
+        target="_blank"
+        rel="noopener"
+        aria-label="Telegram"
+      >
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none"></i>
+    </button>
+  </span>
+</div>
+
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -1055,12 +1321,97 @@
             </div>
 
             
+              
+              
+
+
+
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!--  The comments switcher -->
+
+  
+  <!-- https://giscus.app/ -->
+<script type="text/javascript">
+  (function () {
+    const origin = 'https://giscus.app';
+    const iframe = 'iframe.giscus-frame';
+    const lightTheme = 'light';
+    const darkTheme = 'dark_dimmed';
+
+    let initTheme = lightTheme;
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') &&
+        html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = darkTheme;
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'laolaolulu/laolaolulu.github.io',
+      'data-repo-id': 'R_kgDOI7nPiQ',
+      'data-category': 'General',
+      'data-category-id': 'DIC_kwDOI7nPic4CUHB-',
+      'data-mapping': 'pathname',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': 'bottom',
+      'data-lang': 'en',
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusScript = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusScript.setAttribute(key, value)
+    );
+    document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+    addEventListener('message', (event) => {
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.direction === ModeToggle.ID
+      ) {
+        /* global theme mode changed */
+        const mode = event.data.message;
+        const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+        const message = {
+          setConfig: {
+            theme: theme
+          }
+        };
+
+        const giscus = document.querySelector(iframe).contentWindow;
+        giscus.postMessage({ giscus: message }, origin);
+      }
+    });
+  })();
+</script>
+
+
+
             
 
             <!-- The Footer -->
@@ -1600,7 +1951,10 @@
 
 <!-- layout specified -->
 
-    
+
+ 
+<!-- image lazy-loading & popup & clipboard -->
+      
 
 
 
@@ -1620,6 +1974,18 @@
   
 
   
+    <script src="/assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.umd.min.js"></script>
+  
+
+  
+    <script src="/assets/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+  
+
+  
+    <script src="/assets/lib/clipboard/clipboard.min.js"></script>
+  
+
+  
     <script src="/assets/lib/dayjs/dayjs.min.js"></script>
   
 
@@ -1635,10 +2001,14 @@
     <script src="/assets/lib/dayjs/plugin/localizedFormat.min.js"></script>
   
 
+  
+    <script src="/assets/lib/tocbot/tocbot.min.js"></script>
+  
+
 
 
   
-<script defer src="/assets/js/dist/misc.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
  
 
